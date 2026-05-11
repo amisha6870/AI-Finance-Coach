@@ -1,0 +1,98 @@
+{
+  "trained_at": "2026-05-06T17:44:19.379184+00:00",
+  "dataset_path": "C:\\Users\\Ayush\\OneDrive\\Documents\\GitHub\\nextgen-finance-backend\\dataset\\financial_behavior.csv",
+  "dataset_stats": {
+    "row_count": 24,
+    "original_row_count": 24,
+    "invalid_rows_dropped": 0,
+    "invalid_label_rows_dropped": 0,
+    "medians": {
+      "income": 57500.0,
+      "total_expenses": 41900.0,
+      "food_expense": 8050.0,
+      "shopping_expense": 7200.0,
+      "rent_expense": 14050.0,
+      "savings": 14300.0,
+      "remaining_balance": 30950.0,
+      "month_index": 12.5
+    },
+    "dataset_path": "C:\\Users\\Ayush\\OneDrive\\Documents\\GitHub\\nextgen-finance-backend\\dataset\\financial_behavior.csv"
+  },
+  "artifacts": {
+    "logistic": "logistic_model.pkl",
+    "kmeans": "kmeans_model.pkl",
+    "linear": "linear_model.pkl",
+    "metadata": "training_metadata.json"
+  },
+  "models": {
+    "logistic_regression": {
+      "accuracy": 0.8,
+      "precision": 0.6667,
+      "recall": 1.0,
+      "f1_score": 0.8,
+      "test_samples": 5,
+      "train_samples": 19,
+      "confusion_matrix": [
+        [
+          2,
+          1
+        ],
+        [
+          0,
+          2
+        ]
+      ],
+      "average_probability": 0.5504
+    },
+    "kmeans": {
+      "inertia": 16.6803,
+      "silhouette_score": 0.3806,
+      "cluster_label_map": {
+        "1": "Low Spender",
+        "0": "Moderate Spender",
+        "2": "High Spender"
+      },
+      "cluster_centers": [
+        {
+          "cluster_id": 0,
+          "score": 0.8904006777676503,
+          "center": {
+            "savings_rate": 0.2376,
+            "spend_ratio": 0.7624,
+            "discretionary_spending_percentage": 0.3657
+          }
+        },
+        {
+          "cluster_id": 1,
+          "score": 0.6515662144447647,
+          "center": {
+            "savings_rate": 0.3473,
+            "spend_ratio": 0.6527,
+            "discretionary_spending_percentage": 0.3461
+          }
+        },
+        {
+          "cluster_id": 2,
+          "score": 1.0790891429014249,
+          "center": {
+            "savings_rate": 0.1538,
+            "spend_ratio": 0.8462,
+            "discretionary_spending_percentage": 0.3867
+          }
+        }
+      ],
+      "cluster_distribution": {
+        "Moderate Spender": 10,
+        "Low Spender": 8,
+        "High Spender": 6
+      },
+      "samples": 24
+    },
+    "linear_regression": {
+      "r2_score": 1.0,
+      "mean_absolute_error": 0.0,
+      "test_samples": 5,
+      "train_samples": 19
+    }
+  }
+}

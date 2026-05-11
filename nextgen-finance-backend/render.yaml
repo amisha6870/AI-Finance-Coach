@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: nextgen-finance-backend
+    env: node
+    buildCommand: npm install && python3 -m pip install -r requirements.txt && npm run ml:train
+    startCommand: npm start
+    envVars:
+      - key: PYTHON_PATH
+        value: python3
